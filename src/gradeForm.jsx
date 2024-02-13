@@ -73,7 +73,7 @@ export function GradeForm({ onSubmit }) {
         let ref = generateId()
         setReference(ref)
         paystack.newTransaction({
-            key: 'pk_test_d75598305d12ee4a076be774d02b65b8bcc622ca',
+            key: 'pk_live_1fe2f3a43d1bfa813a1bedad966b91ef93bbbec5',
             email: 'mitchjaga@gmail.com',
             amount: 200,
             currency: 'KES',
@@ -94,7 +94,7 @@ export function GradeForm({ onSubmit }) {
         try {
             const {data} = await axios.get(`https://api.paystack.co/transaction/verify/${reference}`, {
                 headers: {
-                    Authorization: "Bearer sk_test_cf0ce7756ba887f07bcc5908e1dcd19bd4346b8c",
+                    Authorization: "Bearer sk_live_8ed931223ca2e35ca44051565a8b4a6c588ab694",
                     'Content-Type': 'application/json',
                 }
             })
